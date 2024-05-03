@@ -57,6 +57,27 @@ class Solution(object):
             if n <= 0:
                 nums1.remove(n)
 
+        # this doesn't remove the last 0. the indexes are off leaving behind the last 0
+
+    def merger(nums1, m, nums2, n):
+        """
+        :type nums1: List[int]
+        :type m: int
+        :type nums2: List[int]
+        :type n: int
+        :rtype: None Do not return anything, modify nums1 in-place instead.
+        """
+
+        for num in nums2:
+            if num > 0 or num < 0:
+                nums1.append(num)
+
+        nums1 = list(filter(lambda a: a != 0, nums1))
+
+        return sorted(nums1)
+
+        # this works locally, but not in the leetcode compiler
+
 """
 Test Case
 
