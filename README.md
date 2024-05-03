@@ -2,10 +2,10 @@
 
 This project will hold all of the coding challenges I complete from several coding websites. The websites used include:
 
-* [https://www.codewars.com](Codewars)
-* [https://www.hackerrank.com](HackerRank)
-* [https://neetcode.io](NeetCode)
-* [https://leetcode.com](LeetCode)
+* [Codewars](https://www.codewars.com)
+* [HackerRank](https://www.hackerrank.com)
+* [NeetCode](https://neetcode.io)
+* [LeetCode](https://leetcode.com)
 
 There is a directory for each coding practice website used. Each directory will be labeled with the website's name.
 
