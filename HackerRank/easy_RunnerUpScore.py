@@ -23,13 +23,36 @@ if __name__ == '__main__':
         # sort list
         # set index 0 to variable
         # iterate list until 1st num != index 0
+        # ***This method was too complex ***
 
 
-    s = sorted(arr, reverse=True)
+    # s = sorted(arr, reverse=True)
 
-    first = s[0]
+    # first = s[0]
 
-    for num in s:
-        if num == first:
-            s.remove(num)
-    print(s[0])
+    # for num in s:
+    #     if num == first:
+    #         s.remove(num)
+    # print(s[0])
+    # DID NOT WORK
+
+    # for num in s:
+    #     while num == first:
+    #         s.remove(num)
+    # print(s[0])
+    # DID NOT WORK
+
+
+
+
+    # list already exists
+    # get the 2nd highest number
+        # sort list
+        # list.count counts how many times the largest number appears, print index of
+        # list.count + 1
+        # *** This method much simpler and only iterates 1 time for the sort function ***
+
+    sorted_list = sorted(arr, reverse=True)
+
+    i = sorted_list.count(sorted_list[0])
+    print(sorted_list[i])
