@@ -40,6 +40,36 @@ nums2.length == n
 """
 
 class Solution(object):
+
+    def merge(self, nums1, m, nums2, n):
+        """
+        :type nums1: List[int]
+        :type m: int
+        :type nums2: List[int]
+        :type n: int
+        :rtype: None Do not return anything, modify nums1 in-place instead.
+        """
+        # merge the 2 lists, sort it
+        # add m & n, if length of list is greater than m + n, remove zeros until length = m + n
+
+        #just use list.remove(0) until enough zeros are removed so that the length of the list = m + n
+
+        for num in nums2:
+            nums1.append(num)
+
+        nums1.sort()
+
+        total = (m + n)
+        length = len(nums1)
+
+        while length > total:
+            nums1.remove(0)
+            length = len(nums1)
+
+        return nums1
+
+    # This solution WORKS!! A little slow, but it passes all 59 test cases
+
     def merge(self, nums1, m, nums2, n):
         """
         :type nums1: List[int]
