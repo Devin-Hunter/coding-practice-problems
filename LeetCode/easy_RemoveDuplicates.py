@@ -34,7 +34,7 @@ class Solution(object):
         # rinse and repeate until pointer does not equal int
         # **** This method works since array/list IS sorted ****
 
-
+        ### This method O(n^2) time complexity, O(1) space complexity
         next = 1
 
         for val in nums:
@@ -44,6 +44,20 @@ class Solution(object):
                 next += 1
 
         return len(nums)
+
+
+        ### This method slighly slower with a O(n^2) time complexity, O(1) space complexity
+        # current = 0
+        # k = 1
+
+        # while current + 1 < len(nums):
+        #     if nums[current] == nums[current + 1]:
+        #         nums.remove(nums[current + 1])
+        #     else:
+        #         current += 1
+        #         k += 1
+
+        # return k
 
 
 
