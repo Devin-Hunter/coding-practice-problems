@@ -34,16 +34,34 @@ class Solution(object):
         # rinse and repeate until pointer does not equal int
         # **** This method works since array/list IS sorted ****
 
+        ### This method is O(n^2) time, O(1) space
+        current = 0
+        k = 1
+
+        while current + 1 < len(nums):
+            count = nums.count(nums[current])
+            if count > 1:
+                del nums[current:current + (count - 1)]
+            else:
+                current += 1
+                k += 1
+
+        return k
+
+    
+
         ### This method O(n^2) time complexity, O(1) space complexity
-        next = 1
+        # next = 1
 
-        for val in nums:
-            if next <= len(nums) - 1:
-                while next < len(nums) and val == nums[next]:
-                    nums.pop(next)
-                next += 1
+        # for val in nums:
+        #     if next <= len(nums) - 1:
+        #         while next < len(nums) and val == nums[next]:
+        #             nums.pop(next)
+        #         next += 1
 
-        return len(nums)
+        # return len(nums)
+
+
 
 
         ### This method slighly slower with a O(n^2) time complexity, O(1) space complexity
