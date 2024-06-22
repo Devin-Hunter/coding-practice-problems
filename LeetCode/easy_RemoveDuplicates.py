@@ -34,17 +34,23 @@ class Solution(object):
         # rinse and repeate until pointer does not equal int
         # **** This method works since array/list IS sorted ****
 
+
+
         ### This method is O(n log n) time, O(n) space. Since sets aren't sorted by nature, we need the sorted function to pass the test. Also, it needed to be
         ###     set to nums[:] to ensure the set was created within the original list, removing all previous contents, therefore removing all duplicates in place
         ###     This method was the fastest of all my solutions***
         nums[:] = sorted(set(nums))
         return len(nums)
 
+
+
         ### This method is O(n^2) time, O(1) space
         # for val in nums:
         #     del nums[nums.index(val):nums.index(val) + (nums.count(val) - 1)]
 
         # return len(nums)
+
+
 
         ### This method is O(n^2) time, O(1) space
 
