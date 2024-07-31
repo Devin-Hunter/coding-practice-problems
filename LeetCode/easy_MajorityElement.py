@@ -23,8 +23,13 @@ class Solution(object):
         :rtype: int
         """
 
-        #Create dict to hold each unique num in nums, key = num val = occurance count
 
+        """
+        This method works, but it isn't linear time, so it's a little slow.
+        """
+        for num in nums:
+            if nums.count(num) > len(nums)/2:
+                return num
 
         """
         This method failed one of the test cases (it was a LONG list of 1s, 2s, & 3s) - it failed for time limit exceeded
