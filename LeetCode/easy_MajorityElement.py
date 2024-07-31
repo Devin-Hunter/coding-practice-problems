@@ -27,9 +27,19 @@ class Solution(object):
         """
         This method works, but it isn't linear time, so it's a little slow.
         """
-        for num in nums:
-            if nums.count(num) > len(nums)/2:
-                return num
+        # for num in nums:
+        #     if nums.count(num) > len(nums)/2:
+        #         return num
+
+        """
+        This method also works beats 82% for time complexity.
+
+        Since the majority element must exist and occur more than HALF of the list length, then if we sort the list,
+        then the element will be at the middle of the list
+        """
+
+        nums.sort()
+        return nums[len(nums)//2]
 
         """
         This method failed one of the test cases (it was a LONG list of 1s, 2s, & 3s) - it failed for time limit exceeded
