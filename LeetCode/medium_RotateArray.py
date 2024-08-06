@@ -31,6 +31,9 @@ class Solution(object):
         """
         This method doesn't work for all cases and I'm not sure why. For some test cases it works with k, but for others it works with k + 1.
         In Thonny, k works for both test cases when entered manually without any changes.
+
+        If I move k amount of elements from the front of the list to the end, I thought it would be the same for every list. However, for some lists,
+        moving k amount of elements isn't enough elements.
         """
         r = nums[0:k]
         del nums[0:k]
