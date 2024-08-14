@@ -29,8 +29,36 @@ class Solution(object):
         """
 
         """
-        This method works to rotate the list
+        This method combines the last 2 solutions, one to use when k is less than the list length and the other to use when k is greater than the list length
         """
+
+        if k <= len(nums):
+            if k % 2 == 0:
+                r = nums[0:k]
+                del nums[0:k]
+            else:
+                r = nums[0:k + 1]
+                del nums[0:k + 1]
+
+            nums.extend(r)
+        else:
+            while k > 0:
+                r = nums.pop()
+                nums.insert(0, r)
+                k -= 1
+
+        return nums
+
+        """
+        This method works to rotate the list, but it times out if k is a really large number
+        """
+
+        # while k > 0:
+        #     r = nums.pop()
+        #     nums.insert(0, r)
+        #     k -= 1
+
+        # return nums
 
         """
         My first method wasn't working correctly because it didn't account for if k was even or odd, which will change how many elements need to be moved
@@ -42,16 +70,16 @@ class Solution(object):
         and inserting it into the front for these test cases to pass.
         """
 
-        if k % 2 == 0:
-            r = nums[0:k]
-            del nums[0:k]
-        else:
-            r = nums[0:k + 1]
-            del nums[0:k + 1]
+        # if k % 2 == 0:
+        #     r = nums[0:k]
+        #     del nums[0:k]
+        # else:
+        #     r = nums[0:k + 1]
+        #     del nums[0:k + 1]
 
-        nums.extend(r)
+        # nums.extend(r)
 
-        return nums
+        # return nums
 
         """
         This method doesn't work for all cases and I'm not sure why. For some test cases it works with k, but for others it works with k + 1.
