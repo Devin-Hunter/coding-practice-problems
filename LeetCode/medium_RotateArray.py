@@ -30,6 +30,8 @@ class Solution(object):
 
         """
         This method combines the last 2 solutions, one to use when k is less than the list length and the other to use when k is greater than the list length
+
+        This method fails for short lists with k that is smaller than the list length. Not sure why yet
         """
 
         if k <= len(nums):
