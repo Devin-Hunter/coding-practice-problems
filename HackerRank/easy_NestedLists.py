@@ -34,3 +34,26 @@ Output Format
 Print the name(s) of any student(s) having the second lowest grade in. If there are
 multiple students, order their names alphabetically and print each one on a new line.
 """
+
+if __name__ == '__main__':
+    students = []
+    for _ in range(int(input())):
+
+        name = input()
+        score = float(input())
+
+        students.append([name, score])
+
+
+    students.sort(key=lambda x: x[1])
+    # this lambda function allows me to sort the sublists by score instead of name
+
+    second_lowest = students[1][1]
+    print(students)
+    students.sort()
+
+    for s in students:
+        if s[1] == second_lowest:
+            print(s[0])
+
+# This solution does not take into account that more than one student can tie for the lowest score
