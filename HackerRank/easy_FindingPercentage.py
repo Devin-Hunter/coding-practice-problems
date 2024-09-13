@@ -33,3 +33,19 @@ Output Format
 Print one line: The average of the marks obtained by the particular student correct to 2
 decimal places.
 """
+
+### This solution works! The "%.2f" in the print line is for making sure all answers have exactly 2 decimal places,
+### inlcuding if they are whole numbers or have more than 2 decimals after calculation
+
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+
+    marks = student_marks.get(query_name)
+
+    print("%.2f" % (sum(marks)/len(marks)))
