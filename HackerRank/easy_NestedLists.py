@@ -35,7 +35,8 @@ Print the name(s) of any student(s) having the second lowest grade in. If there 
 multiple students, order their names alphabetically and print each one on a new line.
 """
 
-### This solution worked for all test cases, have not tried to optimize
+### This solution worked for all test cases, have not tried to optimize. Right now it is O(n log n) because of the "sort" feature.
+### It would be O(n) if I figure out a way to organize all of the input without using "sort".
 
 if __name__ == '__main__':
     students = []
