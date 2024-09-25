@@ -42,3 +42,21 @@ Constraints
 1 ≤ a[i] ≤ 100
 1 ≤ b[i] ≤ 100
 """
+
+
+def compareTriplets(a, b):
+    scores = [0, 0]
+
+    i = 0
+
+    while i <= 2:
+        if a[i] > b[i]:
+            scores[0] += 1
+            i += 1
+        elif a[i] < b[i]:
+            scores[1] += 1
+            i += 1
+        elif a[i] == b[i]:
+            i += 1
+
+    return scores
