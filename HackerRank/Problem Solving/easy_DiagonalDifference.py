@@ -32,3 +32,25 @@ Output Format
 
 Return the absolute difference between the sums of the matrix's two diagonals as a single integer.
 """
+
+def diagonalDifference(arr):
+    # Write your code here
+    # The first and last rows will always be first[0] and last[length - 1]
+    # The middle number(s) will increase 1 row and 1 column until the last row, and reverse
+    # for the 2nd diagonal
+
+    matrixSize = len(arr) - 1
+
+    leftDiagonal = 0
+    rightDiagonal = 0
+
+    leftfirst = arr[0][0]
+    rightfirst = arr[0][matrixSize]
+
+    leftlast = arr[matrixSize][matrixSize]
+    rightlast = arr[matrixSize][0]
+
+
+    final = abs(leftDiagonal - rightDiagonal)
+
+    return final
