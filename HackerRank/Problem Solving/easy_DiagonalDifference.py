@@ -44,12 +44,27 @@ def diagonalDifference(arr):
     leftDiagonal = 0
     rightDiagonal = 0
 
-    leftfirst = arr[0][0]
-    rightfirst = arr[0][matrixSize]
+    # leftfirst = arr[0][0]
+    # rightfirst = arr[0][matrixSize]
 
-    leftlast = arr[matrixSize][matrixSize]
-    rightlast = arr[matrixSize][0]
+    # leftlast = arr[matrixSize][matrixSize]
+    # rightlast = arr[matrixSize][0]
 
+    a = 0
+    b = 0
+
+    while a <= matrixSize:
+        leftDiagonal += arr[a][b]
+        a += 1
+        b += 1
+
+    c = matrixSize
+    d = 0
+
+    while c >= 0:
+        rightDiagonal += arr[c][d]
+        c -= 1
+        d += 1
 
     final = abs(leftDiagonal - rightDiagonal)
 
