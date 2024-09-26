@@ -1,5 +1,3 @@
-# Query all columns (attributes) for every row in the CITY table.
-
 """
         CITY
 Field       |   TYPE
@@ -10,9 +8,4 @@ COUNTRYCODE |   VARCHAR2(3)
 DISTRICT    |   VARCHAR2(20)
 POPULATION  |   NUMBER
 
-"""
-
-"""
-SELECT *
-FROM CITY
 """
