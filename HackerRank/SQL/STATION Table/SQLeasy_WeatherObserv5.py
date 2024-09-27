@@ -18,6 +18,8 @@ LIMIT 1;
 """
 
 # Originally I tried to use the MIN/MAX functions using a single query, but those didn't account for
-# city names that include spaces for the longest name and it didn't give the correct city name for the
-# shortest name. So instead, I have 2 queries. Each will select all city names, order them in ascending
+# city names that include spaces for the longest name and it didn't give the correct city name with the
+# shortest name.
+#
+# So instead, I have 2 queries. Each will select all city names, order them in ascending
 # or decending order, then order that again by ABC order, then choose the 1st one
